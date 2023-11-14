@@ -26,3 +26,21 @@ for (let i = 0; i < navbarLinks.length; i++) {
     overlay.classList.toggle("active");
   });
 }
+
+
+/* header & go-top-btn ativo */
+
+const header = document.querySelector("[data-header]");
+const goTopBtn = document.querySelector("[data-go-top]");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 400) {
+    header.classList.add("active");
+    goTopBtn.classList.add("active");
+  } else {
+    header.classList.remove("active");
+    goTopBtn.classList.remove("active");
+  }
+});
+
+
